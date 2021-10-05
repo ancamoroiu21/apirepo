@@ -19,7 +19,7 @@ jobs:
         with: 
           php_version: 8.0
           version: 2
-        run: cd api/
+          working_dir: api/
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
 
