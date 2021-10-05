@@ -18,8 +18,10 @@ jobs:
         uses: php-actions/composer@v6 
         with: 
           php_version: 8.0
+          version: 2
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
       - name: installing composer dependecies 
-        run: composer install
+        run: cd api && composer install
+
       
