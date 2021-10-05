@@ -14,5 +14,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: preparing php environment
+        uses: php-actions/composer@v6 
+        with: 
+          php_version: 8.0
+          php_extensions: exif ctype iconv
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
+      - name: installing composer dependecies 
+        run: composer install
+      
