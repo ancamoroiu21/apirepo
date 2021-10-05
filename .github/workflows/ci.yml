@@ -23,6 +23,6 @@ jobs:
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
       - name: testing running php test
-        run: ./api/bin/phpunit
+        run: chmod +x ./api/bin/phpunit && ./api/bin/phpunit
 
       
