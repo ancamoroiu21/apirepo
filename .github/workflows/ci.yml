@@ -15,4 +15,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: linting helmcharts
-        run: cd helm && helm lint
+        run: cd helm/api-platform && helm lint
