@@ -19,9 +19,8 @@ jobs:
         with: 
           php_version: 8.0
           version: 2
+        run: cd api/
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
-      - name: installing composer dependecies 
-        run: cd api && composer install
 
       
