@@ -22,5 +22,7 @@ jobs:
           working_dir: api/
       - name: linting helmcharts
         run: cd helm/api-platform && helm lint
+      - name: testing running php test
+        run: ./api/bin/phpunit
 
       
